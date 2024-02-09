@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="main.css">
+
+    <script src="https://kit.fontawesome.com/14273d579a.js" crossorigin="anonymous"></script>
+
+    <title>Générateur de mot de passe</title>
+</head>
+<body>
+    <main>
+        <header id="title">
+            <h1>Générateur de mot de passe</h1>
+        </header>
+
+        <div id="passwordDisplay">**********</div>
+
+        <section id="securityLevel">
+            <h2>Niveau de sécutité</h2>
+            <div id="bar">
+                <div class="level very-weak"></div>
+                <div class="level weak"></div>
+                <div class="level medium"></div>
+                <div class="level strong"></div>
+            </div>
+        </section>
+
+        <section id="options">
+            <h2>Options</h2>
+            <div class="optionsGrid">
+                <div class="option">
+                    <input type="checkbox" name="lowercase" id="lowercase" checked>
+                    <label for="lowercase">Minuscules</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" name="uppercase" id="uppercase">
+                    <label for="uppercase">Majuscules</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" name="numbers" id="numbers">
+                    <label for="numbers">Chiffres</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" name="specialChars" id="specialChars">
+                    <label for="specialChars">Caractères spéciaux</label>
+                </div>
+            </div>
+        </section>
+
+        <section id="passwordLength">
+            <h2>Nombre de caractères</h2>
+            <input type="number" name="passwordLength" id="passwordLengthInput" aria-label="password length" min="4" max="64" value="8">
+        </section>
+
+        <button id="generateBtn">Générer</button>
+
+        <footer>
+            <p>Pierre Fasce  - 2024</p>
+        </footer>
+    </main>
+
+    <script defer src="index.js"></script>
+</body>
+</html>

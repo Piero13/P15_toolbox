@@ -1,0 +1,12 @@
+{
+  "name": "p15_toolbox",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./main.scss:./main.css",
+    "prefix": "postcss ./public/css/styles.css --use autoprefixer -d ./public/css/prefixed/"
+  },
+  "author": "",
+  "license": "ISC"
+}

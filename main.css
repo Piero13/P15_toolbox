@@ -1,0 +1,150 @@
+@charset "UTF-8";
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* Chrome */
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Opéra*/
+input::-o-inner-spin-button,
+input::-o-outer-spin-button {
+  -o-appearance: none;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  color: white;
+}
+
+h1 {
+  font-size: 1.4rem;
+}
+
+h2 {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+}
+
+body {
+  width: 100%;
+  min-width: 320px;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(to top left, #38367E, #10011F);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px;
+  padding: 40px 30px 20px 30px;
+}
+
+#title, #passwordDisplay, #securityLevel, #options, #passwordLength, #generateBtn {
+  margin-bottom: 50px;
+}
+
+#passwordDisplay {
+  width: 100%;
+  height: 30px;
+  padding: 5px;
+  border: 1px solid #77E509;
+  border-radius: 8px;
+  text-align: center;
+  color: #77E509;
+}
+
+#securityLevel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+#securityLevel #bar {
+  display: flex;
+  width: 100%;
+  height: 20px;
+  background-color: #5e5c9c;
+  border: 1px solid #10011F;
+  box-shadow: 3px 3px 5px #02042e;
+}
+#securityLevel #bar .level {
+  display: none;
+  height: 100%;
+  transition: width 0.5s ease-in-out;
+}
+#securityLevel #bar .very-weak {
+  background-color: red;
+}
+#securityLevel #bar .weak {
+  background-color: orangered;
+}
+#securityLevel #bar .medium {
+  background-color: yellow;
+}
+#securityLevel #bar .strong {
+  background-color: green;
+}
+
+#options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+#options .optionsGrid {
+  width: 100%;
+  display: grid;
+  grid-template: "a b" 50% "c d" 50%/1fr 1fr;
+  row-gap: 10px;
+}
+#options .optionsGrid .option {
+  display: flex;
+  align-items: center;
+}
+#options .optionsGrid .option label {
+  margin-left: 5px;
+}
+#options .optionsGrid .option label:hover {
+  cursor: pointer;
+}
+#options .optionsGrid .option input:hover {
+  cursor: pointer;
+}
+
+#passwordLength {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+#passwordLength #passwordLengthInput {
+  padding: 5px;
+  border: 1px solid white;
+  border-radius: 10px;
+  background-color: #5e5c9c;
+  text-align: center;
+}
+
+#generateBtn {
+  padding: 8px 20px;
+  background-color: #02042e;
+  border-radius: 10px;
+  transition: all 300ms;
+}
+#generateBtn:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  box-shadow: 3px 3px 5px #10011F;
+}/*# sourceMappingURL=main.css.map */
