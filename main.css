@@ -38,6 +38,7 @@ h2 {
 body {
   width: 100%;
   min-width: 320px;
+  min-height: 100svh;
   display: flex;
   justify-content: center;
   background: linear-gradient(to top left, #38367E, #10011F);
