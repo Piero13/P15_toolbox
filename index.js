@@ -104,3 +104,18 @@ function updateSecurityStrength(strength) {
         bar[j].style.width = (100 * (25 / totalWidth)) + "%"; // Calcul de la largeur proportionnelle
     }
 }
+
+function copyToClipboard() {
+    //get the generated password container
+    const passwordDisplay = document.querySelector('#passwordDisplay');
+    //create a fakeinput ans set the contents to the text to copy
+    const storage = document.createElement('textarea');
+    storage.value = passwordDisplay.innerHTML;
+    passwordDisplay.appendChild(storage);
+
+    //copy the text in the fake input and remove it
+    storage.select();
+    storage.setSelectionRange(0,99999);
+    document.execCommand("copy");
+    passwordDisplay.removeChild(storage);
+}

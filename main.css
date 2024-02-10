@@ -22,7 +22,7 @@ input::-o-outer-spin-button {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-size: 14px;
+  font-size: 16px;
   color: white;
 }
 
@@ -38,7 +38,6 @@ h2 {
 body {
   width: 100%;
   min-width: 320px;
-  min-height: 100svh;
   display: flex;
   justify-content: center;
   background: linear-gradient(to top left, #38367E, #10011F);
@@ -52,18 +51,37 @@ main {
   padding: 40px 30px 20px 30px;
 }
 
-#title, #passwordDisplay, #securityLevel, #options, #passwordLength, #generateBtn {
+.btn {
+  padding: 8px 20px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 5px #10011F;
+  font-size: 0.9rem;
+  transition: all 300ms;
+}
+.btn:hover {
+  cursor: pointer;
+  transform: scale(0.9);
+  box-shadow: none;
+}
+
+#title, #securityLevel, #options, #passwordLength, #generateBtn {
   margin-bottom: 50px;
 }
 
 #passwordDisplay {
   width: 100%;
   height: 30px;
+  margin-bottom: 20px;
   padding: 5px;
   border: 1px solid #77E509;
   border-radius: 8px;
   text-align: center;
   color: #77E509;
+}
+
+#copyBtn {
+  background-color: #5e5c9c;
+  margin-bottom: 50px;
 }
 
 #securityLevel {
@@ -139,13 +157,5 @@ main {
 }
 
 #generateBtn {
-  padding: 8px 20px;
   background-color: #02042e;
-  border-radius: 10px;
-  transition: all 300ms;
-}
-#generateBtn:hover {
-  cursor: pointer;
-  transform: scale(1.1);
-  box-shadow: 3px 3px 5px #10011F;
 }/*# sourceMappingURL=main.css.map */
