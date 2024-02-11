@@ -68,8 +68,6 @@ function getPasswordStrength(password) {
     // Calcul du score total
     var totalScore = lengthScore + uppercaseScore + digitScore + specialCharScore;
 
-    console.log(totalScore)
-
     // Attribution du niveau de force en fonction du score total
     if (totalScore <= 2) {
         return "very-weak";
@@ -85,6 +83,7 @@ function getPasswordStrength(password) {
 
 function updateSecurityStrength(strength) {
     var bar = document.querySelectorAll('#securityLevel #bar .level');
+    var securityStrength = document.getElementById("securityStrength");
     // Réinitialisation de toutes les largeurs des segments de la barre
     bar.forEach(function(segment) {
         segment.style.width = "0%";
@@ -103,6 +102,26 @@ function updateSecurityStrength(strength) {
         bar[j].style.display = "block";
         bar[j].style.width = (100 * (25 / totalWidth)) + "%"; // Calcul de la largeur proportionnelle
     }
+
+    //Affichage du niveau de sécurité sous forme de texte
+    var strengthDisplay = ""
+    switch(strength) {
+        case 'very-weak' : 
+            strengthDisplay = "Très faible";
+            break;
+        case 'weak' :
+            strengthDisplay = "Faible";
+            break;
+        case 'medium' :
+            strengthDisplay = "Moyen";
+            break;
+        case 'strong' :
+            strengthDisplay = "Fort";
+            break;
+        default :
+            strengthDisplay = "";
+    }
+    securityStrength.innerHTML = strengthDisplay;
 }
 
 function copyToClipboard() {
