@@ -108,7 +108,7 @@ main {
   background-color: red;
 }
 #securityLevel #bar .weak {
-  background-color: orangered;
+  background-color: orange;
 }
 #securityLevel #bar .medium {
   background-color: yellow;
