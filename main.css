@@ -48,6 +48,7 @@ main {
   flex-direction: column;
   align-items: center;
   max-width: 800px;
+  min-height: 100svh;
   padding: 40px 30px 20px 30px;
 }
 
